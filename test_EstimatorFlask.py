@@ -6,7 +6,7 @@ import pytest
 def client():
     return app.test_client()
 
-def test_home(client):
+def test_predict(client):
     # sample input
     payload = {
         "Age": 35,
@@ -33,5 +33,5 @@ def test_home(client):
     data = response.get_json()
 
     # Ensure the response contains estimated_premium
-    #assert "estimated_premium" in data
-    #assert isinstance(data["estimated_premium"], float)
+    assert "estimated_premium" in data
+    assert isinstance(data["estimated_premium"], float)

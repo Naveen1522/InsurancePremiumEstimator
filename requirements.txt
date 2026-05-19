@@ -2,5 +2,7 @@ streamlit
 flask
 flask-cors
 numpy
-scikit-learn
+scikit-learn==1.8.0
 pandas
+seaborn
+matplotlib
